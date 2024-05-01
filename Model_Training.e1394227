@@ -1,0 +1,24 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.80s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.75s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.91s/it]
+Map:   0%|          | 0/120 [00:00<?, ? examples/s]Map:   0%|          | 0/120 [00:00<?, ? examples/s]
+Traceback (most recent call last):
+  File "/nfs/home/knuchol1/venv/train_model.py", line 26, in <module>
+    tokenized_dataset = train_data.map(preprocess_function, batched=True)
+  File "/nfs/home/knuchol1/venv/lib/python3.9/site-packages/datasets/dataset_dict.py", line 868, in map
+    {
+  File "/nfs/home/knuchol1/venv/lib/python3.9/site-packages/datasets/dataset_dict.py", line 869, in <dictcomp>
+    k: dataset.map(
+  File "/nfs/home/knuchol1/venv/lib/python3.9/site-packages/datasets/arrow_dataset.py", line 593, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+  File "/nfs/home/knuchol1/venv/lib/python3.9/site-packages/datasets/arrow_dataset.py", line 558, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+  File "/nfs/home/knuchol1/venv/lib/python3.9/site-packages/datasets/arrow_dataset.py", line 3105, in map
+    for rank, done, content in Dataset._map_single(**dataset_kwargs):
+  File "/nfs/home/knuchol1/venv/lib/python3.9/site-packages/datasets/arrow_dataset.py", line 3482, in _map_single
+    batch = apply_function_on_filtered_inputs(
+  File "/nfs/home/knuchol1/venv/lib/python3.9/site-packages/datasets/arrow_dataset.py", line 3361, in apply_function_on_filtered_inputs
+    processed_inputs = function(*fn_args, *additional_args, **fn_kwargs)
+  File "/nfs/home/knuchol1/venv/train_model.py", line 19, in preprocess_function
+    inputs = [doc for doc in examples["code"]]
+  File "/nfs/home/knuchol1/venv/lib/python3.9/site-packages/datasets/formatting/formatting.py", line 270, in __getitem__
+    value = self.data[key]
+KeyError: 'code'

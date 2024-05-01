@@ -1,0 +1,23 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [01:32<01:32, 92.47s/it]Loading checkpoint shards: 100%|██████████| 2/2 [02:02<00:00, 55.68s/it]Loading checkpoint shards: 100%|██████████| 2/2 [02:02<00:00, 61.20s/it]
+Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+  0%|          | 0/45 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/nfs/home/knuchol1/venv/train_model.py", line 64, in <module>
+    trainer.train()
+  File "/nfs/home/knuchol1/venv/lib/python3.9/site-packages/transformers/trainer.py", line 1837, in train
+    return inner_training_loop(
+  File "/nfs/home/knuchol1/venv/lib/python3.9/site-packages/transformers/trainer.py", line 2244, in _inner_training_loop
+    self.optimizer.step()
+  File "/nfs/home/knuchol1/venv/lib/python3.9/site-packages/accelerate/optimizer.py", line 149, in step
+    self.optimizer.step(closure)
+  File "/nfs/home/knuchol1/venv/lib/python3.9/site-packages/torch/optim/lr_scheduler.py", line 75, in wrapper
+    return wrapped(*args, **kwargs)
+  File "/nfs/home/knuchol1/venv/lib/python3.9/site-packages/torch/optim/optimizer.py", line 385, in wrapper
+    out = func(*args, **kwargs)
+  File "/nfs/home/knuchol1/venv/lib/python3.9/site-packages/torch/optim/optimizer.py", line 76, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/nfs/home/knuchol1/venv/lib/python3.9/site-packages/torch/optim/adamw.py", line 176, in step
+    has_complex = self._init_group(
+  File "/nfs/home/knuchol1/venv/lib/python3.9/site-packages/torch/optim/adamw.py", line 123, in _init_group
+    state["exp_avg"] = torch.zeros_like(
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 64.00 MiB. GPU 0 has a total capacity of 79.11 GiB of which 53.38 MiB is free. Including non-PyTorch memory, this process has 79.04 GiB memory in use. Of the allocated memory 77.63 GiB is allocated by PyTorch, and 712.26 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+  0%|          | 0/45 [00:05<?, ?it/s]

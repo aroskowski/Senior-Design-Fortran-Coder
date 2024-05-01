@@ -1,0 +1,2 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]/var/spool/slurm/spool/job1395744/slurm_script: line 11: 2689964 Killed                  python train_model.py
+slurmstepd: error: Detected 1 oom_kill event in StepId=1395744.batch. Some of the step tasks have been OOM Killed.
