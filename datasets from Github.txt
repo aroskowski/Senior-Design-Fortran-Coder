@@ -1,0 +1,4 @@
+﻿https://github.com/certik/fortran-utils/tree/master?tab=MIT-1-ov-file
+https://github.com/fortran-lang/stdlib?tab=MIT-1-ov-file
+https://github.com/astrofrog/fortranlib/tree/master?tab=BSD-2-Clause-1-ov-file
+https://github.com/modern-fortran/stock-prices/tree/master/src
