@@ -158,7 +158,7 @@ button_frame.grid(row=0, column=1)
 empty_frame = tk.Frame(h_frame, width=100)
 empty_frame.grid(row=0, column=3)
 
-load = tk.Label(load_frame, text=" ", width=10, font=('Times New Roman', 20))
+load = tk.Label(load_frame, text=" ", width=20, font=('Times New Roman', 20))
 load.pack(side=tk.LEFT)
 
 # Button widget for submitting input
